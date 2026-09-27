@@ -10,5 +10,10 @@ namespace Soenneker.Instagram.OpenApiClientUtil.Abstract;
 /// </summary>
 public interface IInstagramOpenApiClientUtil: IDisposable, IAsyncDisposable
 {
+    /// <summary>
+    /// Gets the cached, authenticated Instagram publishing client.
+    /// </summary>
+    /// <param name="cancellationToken">Token used to cancel client initialization.</param>
+    /// <returns>The configured OpenAPI client.</returns>
     ValueTask<InstagramOpenApiClient> Get(CancellationToken cancellationToken = default);
 }

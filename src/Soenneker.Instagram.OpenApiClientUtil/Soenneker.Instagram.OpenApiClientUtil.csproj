@@ -47,9 +47,7 @@
         <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="4.0.855" />
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\..\..\soenneker.instagram.httpclients\src\Soenneker.Instagram.HttpClients\Soenneker.Instagram.HttpClients.csproj" Condition="Exists('..\..\..\soenneker.instagram.httpclients\src\Soenneker.Instagram.HttpClients\Soenneker.Instagram.HttpClients.csproj')" />
-        <PackageReference Include="Soenneker.Instagram.HttpClients" Version="4.0.1" Condition="!Exists('..\..\..\soenneker.instagram.httpclients\src\Soenneker.Instagram.HttpClients\Soenneker.Instagram.HttpClients.csproj')" />
-        <ProjectReference Include="..\..\..\soenneker.instagram.openapiclient\src\Soenneker.Instagram.OpenApiClient\Soenneker.Instagram.OpenApiClient.csproj" Condition="Exists('..\..\..\soenneker.instagram.openapiclient\src\Soenneker.Instagram.OpenApiClient\Soenneker.Instagram.OpenApiClient.csproj')" />
-        <PackageReference Include="Soenneker.Instagram.OpenApiClient" Version="4.0.1" Condition="!Exists('..\..\..\soenneker.instagram.openapiclient\src\Soenneker.Instagram.OpenApiClient\Soenneker.Instagram.OpenApiClient.csproj')" />
+        <PackageReference Include="Soenneker.Instagram.HttpClients" Version="4.0.1" />
+        <PackageReference Include="Soenneker.Instagram.OpenApiClient" Version="4.0.1" />
     </ItemGroup>
 </Project>

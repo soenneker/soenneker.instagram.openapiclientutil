@@ -44,7 +44,7 @@
 
     <ItemGroup>
         <PackageReference Include="Soenneker.Kiota.GenericAuthenticationProvider" Version="4.0.47" />
-        <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="4.0.856" />
+        <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="4.0.857" />
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Soenneker.Instagram.HttpClients" Version="4.0.2" />

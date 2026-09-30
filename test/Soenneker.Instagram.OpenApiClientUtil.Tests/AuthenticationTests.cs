@@ -12,7 +12,7 @@ namespace Soenneker.Instagram.OpenApiClientUtil.Tests;
 public sealed class AuthenticationTests
 {
     [Test]
-    public async Task UsesConfiguredTokenBaseUrlAndSingleton()
+    public async ValueTask UsesConfiguredTokenBaseUrlAndSingleton()
     {
         using var http = new HttpClient(new Handler());
         var configuration = new ConfigurationBuilder().AddInMemoryCollection(new Dictionary<string, string?>

@@ -12,7 +12,7 @@ namespace Soenneker.Instagram.OpenApiClientUtil.Tests;
 public sealed class AuthenticationTests
 {
     [Test]
-    public async ValueTask UsesConfiguredTokenBaseUrlAndSingleton()
+    public async ValueTask UsesConfiguredTokenBaseUrlAndSingleton(CancellationToken cancellationToken)
     {
         using var http = new HttpClient(new Handler());
         var configuration = new ConfigurationBuilder().AddInMemoryCollection(new Dictionary<string, string?>
@@ -21,9 +21,9 @@ public sealed class AuthenticationTests
             ["Instagram:ClientBaseUrl"] = "https://graph.facebook.com/v25.0"
         }).Build();
         await using var utility = new InstagramOpenApiClientUtil(new HttpProvider(http), configuration);
-        var client = await utility.Get();
-        if (!ReferenceEquals(client, await utility.Get())) throw new InvalidOperationException("Client was not reused");
-        var result = await client["123"].GetAsync();
+        var client = await utility.Get(cancellationToken: cancellationToken);
+        if (!ReferenceEquals(client, await utility.Get(cancellationToken: cancellationToken))) throw new InvalidOperationException("Client was not reused");
+        var result = await client["123"].GetAsync(cancellationToken: cancellationToken);
         if (result?.Id != "123") throw new InvalidOperationException("Response was not deserialized");
     }
 

@@ -23,7 +23,7 @@ public sealed class InstagramOpenApiClientUtil : IInstagramOpenApiClientUtil
         {
             HttpClient httpClient = await httpClientUtil.Get(token).NoSync();
 
-            var apiKey = configuration.GetValueStrict<string>("Instagram:AccessToken");
+            var apiKey = configuration.GetStringStrict("Instagram:AccessToken");
             string authHeaderName = configuration["Instagram:AuthHeaderName"] ?? "Authorization";
             string authHeaderValueTemplate = configuration["Instagram:AuthHeaderValueTemplate"] ?? "Bearer {token}";
             string authHeaderValue = authHeaderValueTemplate.Replace("{token}", apiKey, StringComparison.Ordinal);

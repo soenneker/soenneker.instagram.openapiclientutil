@@ -46,10 +46,10 @@
 
     <ItemGroup>
         <PackageReference Include="Soenneker.Kiota.GenericAuthenticationProvider" Version="4.0.56" />
-        <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="4.0.875" />
+        <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="4.0.879" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Soenneker.Instagram.HttpClients" Version="4.0.24" />
+        <PackageReference Include="Soenneker.Instagram.HttpClients" Version="4.0.25" />
         <PackageReference Include="Soenneker.Instagram.OpenApiClient" Version="4.0.29" />
     </ItemGroup>
 </Project>

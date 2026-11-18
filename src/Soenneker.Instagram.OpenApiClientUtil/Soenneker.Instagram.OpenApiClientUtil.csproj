@@ -50,7 +50,7 @@
         <PackageReference Include="Soenneker.Utils.AsyncSingleton" Version="11.0.893" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Soenneker.Instagram.HttpClients" Version="11.0.48" />
+        <PackageReference Include="Soenneker.Instagram.HttpClients" Version="11.0.49" />
         <PackageReference Include="Soenneker.Instagram.OpenApiClient" Version="11.0.78" />
     </ItemGroup>
 </Project>
